@@ -3,7 +3,7 @@
 > This application utilizes Agentic AI to search the internet to retrieve a result based on a user query.
 
 ### Setup
-1. Create a [Tavily API Key](app.tavily.com) and place in ```.env``` at the root folder
+1. Create a [Tavily API Key](https://app.tavily.com) and place in ```.env``` at the root folder
 2. ```TAVILY_API_KEY=<your-api-key-string>```
 3. ```pip install openai-agents openai python-dotenv markdown xhtml2pdf```
 4. Define ```USER_QUERY```, ```USER_QUERY_LIMIT```, ```QUERY_DEPTH_LIMIT```, and ```MODEL``` within ```main.py```
