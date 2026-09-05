@@ -1,3 +1,5 @@
+ # Credit to Ed Donner (https://gale.udemy.com/user/ed-donner-3/) for providing inspiration and guidance on some of this code
+
 from agents import Agent, OpenAIChatCompletionsModel, Runner
 from openai import AsyncOpenAI
 import asyncio
@@ -17,7 +19,7 @@ ollama_client = AsyncOpenAI(
     api_key="ollama",
 )
 
-USER_QUERY = "Find me active jobs that would be good for someone with a doctorate in Artificial Intelligence and 10 years of software engineering experience."
+USER_QUERY = "Outline the Pittsburgh job market for someone with a doctorate in Artificial Intelligence and 10 years of software engineering experience."
 USER_QUERY_LIMIT = 4
 QUERY_DEPTH_LIMIT = 1
 MODEL = "qwen3.8:27b"
@@ -110,10 +112,6 @@ async def main():
 
     generate_report_coroutine = generate_summary_report(f"""
         Query: {USER_QUERY} search strings: {result.searches} search results: {results}
-    """)
-
-    generate_report_coroutine = generate_summary_report(f"""
-        Query: {USER_QUERY} search strings: {result.searches}
     """)
 
     await generate_report_coroutine
